@@ -1,0 +1,38 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'ir.parkban.app'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId 'ir.parkban.app'
+        minSdk 23
+        targetSdk 28
+        versionCode 2
+        versionName '1.1'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    signingConfigs {
+        release {
+            storeFile file('parkban-release.jks')
+            storePassword System.getenv('PARKBAN_KEYSTORE_PASSWORD') ?: 'change-me'
+            keyAlias System.getenv('PARKBAN_KEY_ALIAS') ?: 'parkban'
+            keyPassword System.getenv('PARKBAN_KEY_PASSWORD') ?: 'change-me'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            debuggable false
+            signingConfig signingConfigs.release
+        }
+    }
+}
