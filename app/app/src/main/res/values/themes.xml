@@ -1,0 +1,36 @@
+<resources>
+
+    <style
+        name="Theme.ParkBan"
+        parent="android:style/Theme.Material.Light.NoActionBar">
+
+        <item name="android:fontFamily">sans</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:statusBarColor">
+            @color/parkban_dark
+        </item>
+        <item name="android:navigationBarColor">
+            @color/parkban_dark
+        </item>
+
+    </style>
+
+    <style
+        name="Theme.ParkBan.Starting"
+        parent="android:style/Theme.Material.Light.NoActionBar">
+
+        <item name="android:windowBackground">
+            @color/parkban_blue
+        </item>
+
+        <item name="android:statusBarColor">
+            @color/parkban_blue
+        </item>
+
+        <item name="android:navigationBarColor">
+            @color/parkban_blue
+        </item>
+
+    </style>
+
+</resources
